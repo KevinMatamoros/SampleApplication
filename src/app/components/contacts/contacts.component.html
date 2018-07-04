@@ -1,0 +1,171 @@
+
+<div class="container">
+
+  <!-- ADD CONTACT MODAL -->
+  <p-dialog header="Add Contact" [(visible)]="dialogContactAdd" [modal]="true" [responsive]="true" [width]="350" [minWidth]="200" [minY]="70" 
+    [maximizable]="true" [baseZIndex]="10000">
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">First name *</label>
+        <input id="input" class="form-control" type="text" size="30" id="firstName" placeholder="Required" pInputText > 
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Last name</label>
+        <input id="input" class="form-control" type="text" size="30" id="lastName" pInputText > 
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">PhoneNumber</label>
+        <input id="input" class="form-control" type="text" size="30" id="phoneNumber" pKeyFilter="num" pInputText > 
+        <i class="fa fa-plus-circle margin10" ></i>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input id="input" class="form-control" type="text" size="30" id="email" placeholder="name@example.com" pInputText > 
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Contact address 1</label>
+        <textarea class="form-control" id="address1" rows="5" cols="30" pInputTextarea></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Contact address 2</label>
+        <textarea class="form-control" id="address2" rows="5" cols="30" pInputTextarea></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">City</label>
+        <input id="input" class="form-control" type="text" size="30" id="city" pInputText > 
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">State</label>
+        <input id="input" class="form-control" type="text" size="30" id="state" pInputText > 
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Zip Code</label>
+        <input id="input" class="form-control" type="text" size="30" id="zipCode" pInputText > 
+      </div>
+    </form>
+    <p-footer>
+        <button type="button" pButton icon="pi pi-check" (click)="dialogAddContact=false" label="Save"></button>
+        <button type="button" pButton icon="pi pi-close" (click)="dialogAddContact=false" label="Cancel"></button>
+    </p-footer>
+  </p-dialog>
+
+  <!-- BUTTON OPEN MODAL CONTACT -->
+  <div class="ui-g-12 ui-md-4">
+    <div class="ui-inputgroup">
+      <p-button (onClick)="dialogs(1)" icon="pi pi-user-plus" label="Add Contact"></p-button>       
+    </div>
+  </div>
+</div>
+
+
+  <!-- CRUD CONTACT MODAL -->
+  <p-dialog header="Add Contact" [(visible)]="dialogAddContact" [modal]="true" [responsive]="true" [width]="350" [minWidth]="200" [minY]="70" 
+    [maximizable]="true" [baseZIndex]="10000">
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">First name *</label>
+        <input id="input" class="form-control" type="text" size="30" id="firstName" placeholder="Required" pInputText > 
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Last name</label>
+        <input id="input" class="form-control" type="text" size="30" id="lastName" pInputText > 
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">PhoneNumber</label>
+        <input id="input" class="form-control" type="text" size="30" id="phoneNumber" pKeyFilter="num" pInputText > 
+        <i class="fa fa-plus-circle margin10" ></i>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input id="input" class="form-control" type="text" size="30" id="email" placeholder="name@example.com" pInputText > 
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Contact address 1</label>
+        <textarea class="form-control" id="address1" rows="5" cols="30" pInputTextarea></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Contact address 2</label>
+        <textarea class="form-control" id="address2" rows="5" cols="30" pInputTextarea></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">City</label>
+        <input id="input" class="form-control" type="text" size="30" id="city" pInputText > 
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">State</label>
+        <input id="input" class="form-control" type="text" size="30" id="state" pInputText > 
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Zip Code</label>
+        <input id="input" class="form-control" type="text" size="30" id="zipCode" pInputText > 
+      </div>
+    </form>
+    <p-footer>
+        <button type="button" pButton icon="pi pi-check" (click)="dialogAddContact=false" label="Save"></button>
+        <button type="button" pButton icon="pi pi-close" (click)="dialogAddContact=false" label="Cancel"></button>
+    </p-footer>
+  </p-dialog>
+
+  <!-- LIST OF CONTACTS -->
+  <div class="container text-center margin 10">
+      <div class="row">
+          <div class="col-md-12">
+              <p-table [columns]="cols" [value]="contacts" selectionMode="single" [(selection)]="selectedContact" dataKey="contactId">
+                  <ng-template pTemplate="header" let-columns>
+                      <tr>
+                          <th *ngFor="let col of columns">
+                              {{col.header}}
+                          </th>
+                      </tr>
+                  </ng-template>
+                  <ng-template pTemplate="body" let-rowData let-columns="columns">
+                      <tr [pSelectableRow]="rowData">
+                          <td *ngFor="let col of columns">
+                              {{rowData[col.field]}}
+                          </td>
+                      </tr>
+                  </ng-template>
+                  <ng-template pTemplate="summary">
+                      <div style="text-align: left" *ngIf="contacts.length == 0">
+                            No data available, please click "Add Contact" to add a new contact
+                      </div>
+                  </ng-template>
+              </p-table>
+          </div>
+        </div>
+  </div>
+
+  <!-- LIST OF CONTACTS 2-->
+  <div class="container text-center margin10">
+      <div class="row">
+          <div class="col-md-12">
+              <p-dataScroller [value]="contacts" [rows]="10" [inline]="true" scrollHeight="500px">
+                  <p-header>
+                      Contacts List
+                  </p-header>
+                  <ng-template let-contact pTemplate="item">
+                      <div class="ui-g car-item" (click)="test(contact)">
+                          <div class="ui-g-12 ui-md-3">
+                              <img src="assets/showcase/images/contact.png">
+                          </div>
+                          <div class="ui-g-12 ui-md-9">
+                              <div class="ui-g"  >
+                                  <div class="ui-g-2 ui-sm-6">Name: </div>
+                                  <div class="ui-g-10 ui-sm-6"><b>{{contact.firstName}}</b></div>
+                                  <div class="ui-g-2 ui-sm-6">Last Name: </div>
+                                  <div class="ui-g-10 ui-sm-6"><b>{{contact.lastName}}</b></div>
+                              </div>
+                          </div>
+                      </div>
+                  </ng-template>
+                 <!--  <p-footer *ngIf="contacts.length == 0">
+                        No data available, please click "Add Contact" to add a new contact
+                </p-footer> -->
+              </p-dataScroller>
+          </div>
+        </div>
+  </div>
+
+
+
+
