@@ -1,0 +1,126 @@
+[
+    {
+        "contactId" : "352S313AS52D3",
+        "firstName": "Fernanda",
+        "lastName": "Montero",
+        "phoneNumber": "67543215",
+        "email":"mfernanda@gmail.com",
+        "streetAddress1": "",
+        "streetAddress2": "",
+        "city": "Moravia",
+        "state": "",
+        "zipCode": ""
+      },
+      {
+        "contactId" : "141D2F1GQ262TQ213",
+        "firstName": "Kevin",
+        "lastName": "Matamoros",
+        "phoneNumber": "60574185",
+        "email":"k.andres0620@gmail.com",
+        "streetAddress1": "Porton Azul",
+        "streetAddress2": "Casa Color Vainilla",
+        "city": "Curridabat",
+        "state": "Jose Maria Zeledon",
+        "zipCode": "11303"
+      },
+      {
+        "contactId" : "HK199DA0N2758302123",
+        "firstName": "Aaron",
+        "lastName": "Chaves",
+        "phoneNumber": "89008765",
+        "email":"",
+        "streetAddress1": "",
+        "streetAddress2": "",
+        "city": "",
+        "state": "Heredia",
+        "zipCode": ""
+      },
+      {
+        "contactId" : "HJI10239S758302123",
+        "firstName": "Gabriel",
+        "lastName": "Azofeifa",
+        "phoneNumber": "",
+        "email":"gaboAzo@gmail.com",
+        "streetAddress1": "",
+        "streetAddress2": "",
+        "city": "",
+        "state": "Heredia",
+        "zipCode": ""
+      }
+      ,
+      {
+        "contactId" : "HJYTILWMA97758302123",
+        "firstName": "Ricardo",
+        "lastName": "Wong",
+        "phoneNumber": "45679800",
+        "email":"wong02@gmail.com",
+        "streetAddress1": "",
+        "streetAddress2": "",
+        "city": "",
+        "state": "",
+        "zipCode": ""
+      }
+      ,
+      {
+        "contactId" : "HJYTILWMA7808AS98SDF3",
+        "firstName": "Alban",
+        "lastName": "Jimenez",
+        "phoneNumber": "89764589",
+        "email":"",
+        "streetAddress1": "",
+        "streetAddress2": "",
+        "city": "",
+        "state": "",
+        "zipCode": ""
+      },
+      {
+        "contactId" : "HJYTILWMA97IAUS14YDT623",
+        "firstName": "Miguel",
+        "lastName": "Alvarado",
+        "phoneNumber": "76528943",
+        "email":"",
+        "streetAddress1": "",
+        "streetAddress2": "",
+        "city": "",
+        "state": "",
+        "zipCode": ""
+      },
+      {
+        "contactId" : "HJYTILWMYASDF719AS623",
+        "firstName": "Yaxiri",
+        "lastName": "Azofeifa",
+        "phoneNumber": "87675132",
+        "email":"",
+        "streetAddress1": "",
+        "streetAddress2": "",
+        "city": "",
+        "state": "",
+        "zipCode": ""
+      },
+      {
+        "contactId" : "HJYTI18274920ASDFN1929AS623",
+        "firstName": "Javier",
+        "lastName": "Zuñiga",
+        "phoneNumber": "78656645",
+        "email":"",
+        "streetAddress1": "",
+        "streetAddress2": "",
+        "city": "",
+        "state": "",
+        "zipCode": ""
+      },
+      {
+        "contactId" : "HJYTILWM99S78852F19AS623",
+        "firstName": "Erick",
+        "lastName": "Madrigal",
+        "phoneNumber": "89008765",
+        "email":"",
+        "streetAddress1": "",
+        "streetAddress2": "",
+        "city": "",
+        "state": "",
+        "zipCode": ""
+      }
+
+
+]
